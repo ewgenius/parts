@@ -1,3 +1,11 @@
-name: my-spicepod
-kind: Spicepod
 version: v1beta1
+kind: Spicepod
+name: tpch
+
+datasets:
+  - from: s3://spiceai-demo-datasets/tpch/part/
+    name: part
+    params:
+      file_format: parquet
+    acceleration:
+      enabled: false
